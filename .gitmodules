@@ -1,0 +1,3 @@
+[submodule "HWVCS"]
+	path = HWVCS
+	url = https://github.com/yurik359/HWVCS.git
