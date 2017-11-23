@@ -1,0 +1,541 @@
+User@Gateway MINGW64 ~ (master)
+$ cd D:
+
+User@Gateway MINGW64 /d
+$ git clone https://github.com/yurik359/HWVCS.git
+Cloning into 'HWVCS'...
+warning: You appear to have cloned an empty repository.
+
+User@Gateway MINGW64 /d
+$ cd HWVCS
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git init
+Reinitialized existing Git repository in D:/HWVCS/.git/
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git add .
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git commit -m "0"
+On branch master
+
+Initial commit
+
+nothing to commit
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git branch
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ touch asd.txt
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git add .
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git commit -m "test"
+[master (root-commit) 299c7b7] test
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 asd.txt
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git branch
+* master
+_____________________________________________________________________________
+
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git branch architecture
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git checkout architecture
+Switched to branch 'architecture'
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ mkdir assets uploads
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ touch index.html
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ git add .
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ git commit -m "1"
+[architecture 9457ce3] 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ touch assets/all.js assets/css.js
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ git add .
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ git commit -m "2"
+[architecture f703db7] 2
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 assets/all.js
+ create mode 100644 assets/css.js
+
+
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ git push --set-upstream origin architecture
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 694 bytes | 347.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0)
+To https://github.com/yurik359/HWVCS.git
+ * [new branch]      architecture -> architecture
+Branch 'architecture' set up to track remote branch 'architecture' from 'origin'.
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ touch .gitignore
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ echo "uploads/" > .gitignore
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ touch uploads/sd.txt
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ git status
+On branch architecture
+Your branch is up to date with 'origin/architecture'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ git add .
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory.
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ git commit -m "ignore"
+[architecture e02fe28] ignore
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+User@Gateway MINGW64 /d/HWVCS (architecture)
+$ git checkout master
+Switched to branch 'master'
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git merge architecture
+Updating 299c7b7..e02fe28
+Fast-forward
+ .gitignore    | 1 +
+ assets/all.js | 0
+ assets/css.js | 0
+ index.html    | 0
+ 4 files changed, 1 insertion(+)
+ create mode 100644 .gitignore
+ create mode 100644 assets/all.js
+ create mode 100644 assets/css.js
+ create mode 100644 index.html
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git branch -D architecture
+Deleted branch architecture (was e02fe28).
+
+task 2
+
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git branch task_2
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ touch main.css main.js
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git add .
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   main.css
+        new file:   main.js
+
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git commit -m "01"
+[master e1c12c2] 01
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main.css
+ create mode 100644 main.js
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ vi main.css
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   main.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git add main.css
+warning: LF will be replaced by CRLF in main.css.
+The file will have its original line endings in your working directory.
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git commit -m "02"
+[master 48d8105] 02
+ 1 file changed, 3 insertions(+)
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ vi main.js
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   main.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git add main.js
+warning: LF will be replaced by CRLF in main.js.
+The file will have its original line endings in your working directory.
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git commit -m "03"
+[master 5f25c69] 03
+ 1 file changed, 5 insertions(+)
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git checkout task_2
+Switched to branch 'task_2'
+
+User@Gateway MINGW64 /d/HWVCS (task_2)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded task_2 to master.
+
+User@Gateway MINGW64 /d/HWVCS (task_2)
+$ ls
+asd.txt  assets/  index.html  main.css  main.js  uploads/
+
+User@Gateway MINGW64 /d/HWVCS (task_2)
+$ vi main.css
+
+User@Gateway MINGW64 /d/HWVCS (task_2)
+$ git add main.css
+
+User@Gateway MINGW64 /d/HWVCS (task_2)
+$ git commit -m "04"
+[task_2 c83582b] 04
+ 1 file changed, 5 insertions(+)
+
+User@Gateway MINGW64 /d/HWVCS (task_2)
+$ vi main.js
+
+User@Gateway MINGW64 /d/HWVCS (task_2)
+$ git add main.js
+
+User@Gateway MINGW64 /d/HWVCS (task_2)
+$ git commit -m "05"
+[task_2 db3db12] 05
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@Gateway MINGW64 /d/HWVCS (task_2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git merge task_2
+Updating 5f25c69..db3db12
+Fast-forward
+ main.css | 5 +++++
+ main.js  | 2 +-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git branch -D task_2
+Deleted branch task_2 (was db3db12).
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (17/17), 1.36 KiB | 347.00 KiB/s, done.
+Total 17 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/yurik359/HWVCS.git
+ * [new branch]      master -> master
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$
+
+
+
+TASK_3
+
+
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ touch 123.txt
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git add 123.txt
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git commit -m "commit1"
+[master 6712a3c] commit1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 123.txt
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ vi 123.txt
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git add 123.txt
+warning: LF will be replaced by CRLF in 123.txt.
+The file will have its original line endings in your working directory.
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git commit -m "commit2"
+[master e5937bf] commit2
+ 1 file changed, 1 insertion(+)
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git tag -a v1.0 -m "v1"
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git show v1.0
+tag v1.0
+Tagger: yurik359 <yurik52222@gmail.com>
+Date:   Tue Nov 21 01:36:24 2017 +0200
+
+v1
+
+commit e5937bfda3e3f52c8e0ded9acad233f948a486ec (HEAD -> master, tag: v1.0)
+Author: yurik359 <yurik52222@gmail.com>
+Date:   Tue Nov 21 01:35:43 2017 +0200
+
+    commit2
+
+diff --git a/123.txt b/123.txt
+index e69de29..3d4db09 100644
+--- a/123.txt
++++ b/123.txt
+@@ -0,0 +1 @@
++123123
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git push origin v1.0
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 582 bytes | 194.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/yurik359/HWVCS.git
+ * [new tag]         v1.0 -> v1.0
+
+task 4
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git submodule add https://github.com/yurik359/HWVCS.git HWVCS
+Cloning into 'D:/HWVCS/HWVCS'...
+remote: Counting objects: 31, done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 31 (delta 8), reused 30 (delta 7), pack-reused 0
+Unpacking objects: 100% (31/31), done.
+warning: LF will be replaced by CRLF in .gitmodules.
+The file will have its original line endings in your working directory.
+
+
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git commit -m "addsub"
+[master 9dd458d] addsub
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 160000 HWVCS
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 369 bytes | 184.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/yurik359/HWVCS.git
+   db3db12..9dd458d  master -> master
+
+
+task 5
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git checkout -b gh-pages
+Switched to a new branch 'gh-pages'
+
+User@Gateway MINGW64 /d/HWVCS (gh-pages)
+$ touch index.html
+
+User@Gateway MINGW64 /d/HWVCS (gh-pages)
+$ vi index.html
+
+User@Gateway MINGW64 /d/HWVCS (gh-pages)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+
+User@Gateway MINGW64 /d/HWVCS (gh-pages)
+$ git push --set-upstream origin gh-pages
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/yurik359/HWVCS.git
+ * [new branch]      gh-pages -> gh-pages
+Branch 'gh-pages' set up to track remote branch 'gh-pages' from 'origin'.
+
+User@Gateway MINGW64 /d/HWVCS (gh-pages)
+$ vi index.html
+
+
+
+
+User@Gateway MINGW64 /d/HWVCS (gh-pages)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+
+User@Gateway MINGW64 /d/HWVCS (gh-pages)
+$ git commit -m "com"
+[gh-pages 9187d39] com
+ 1 file changed, 2 insertions(+)
+
+User@Gateway MINGW64 /d/HWVCS (gh-pages)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 294.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/yurik359/HWVCS.git
+   9dd458d..9187d39  gh-pages -> gh-pages
+
+https://yurik359.github.io/HWVCS/
+
+
+task 6
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ touch file.txt
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ vi file.txt
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git add.txt
+git: 'add.txt' is not a git command. See 'git --help'.
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory.
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git commit -m "first change"
+[master 1741d34] first change
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git checkout branch
+Switched to branch 'branch'
+
+User@Gateway MINGW64 /d/HWVCS (branch)
+$ vi file.txt
+
+User@Gateway MINGW64 /d/HWVCS (branch)
+$ git add file.txt
+
+User@Gateway MINGW64 /d/HWVCS (branch)
+$ git commit -m "2changes"
+[branch e377fd2] 2changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@Gateway MINGW64 /d/HWVCS (branch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 4 commits.
+  (use "git push" to publish your local commits)
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git merge branch
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@Gateway MINGW64 /d/HWVCS (master|MERGING)
+$ vi file.txt
+
+User@Gateway MINGW64 /d/HWVCS (master|MERGING)
+$ git add file.txt
+
+User@Gateway MINGW64 /d/HWVCS (master|MERGING)
+$ git commit -m "confict"
+[master 508ba00] confict
+
+User@Gateway MINGW64 /d/HWVCS (master)
+$ git push
+Counting objects: 18, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (18/18), 1.38 KiB | 353.00 KiB/s, done.
+Total 18 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+To https://github.com/yurik359/HWVCS.git
+   c2d602b..508ba00  master -> master
