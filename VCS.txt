@@ -1,49 +1,6 @@
-User@Gateway MINGW64 ~ (master)
-$ cd D:
 
-User@Gateway MINGW64 /d
-$ git clone https://github.com/yurik359/HWVCS.git
-Cloning into 'HWVCS'...
-warning: You appear to have cloned an empty repository.
-
-User@Gateway MINGW64 /d
-$ cd HWVCS
-
-User@Gateway MINGW64 /d/HWVCS (master)
-$ git init
-Reinitialized existing Git repository in D:/HWVCS/.git/
-
-User@Gateway MINGW64 /d/HWVCS (master)
-$ git add .
-
-User@Gateway MINGW64 /d/HWVCS (master)
-$ git commit -m "0"
-On branch master
-
-Initial commit
-
-nothing to commit
-
-User@Gateway MINGW64 /d/HWVCS (master)
-$ git branch
-
-User@Gateway MINGW64 /d/HWVCS (master)
-$ touch asd.txt
-
-User@Gateway MINGW64 /d/HWVCS (master)
-$ git add .
-
-User@Gateway MINGW64 /d/HWVCS (master)
-$ git commit -m "test"
-[master (root-commit) 299c7b7] test
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 asd.txt
-
-User@Gateway MINGW64 /d/HWVCS (master)
-$ git branch
-* master
 _____________________________________________________________________________
-
+task1
 
 User@Gateway MINGW64 /d/HWVCS (master)
 $ git branch architecture
@@ -149,7 +106,7 @@ User@Gateway MINGW64 /d/HWVCS (master)
 $ git branch -D architecture
 Deleted branch architecture (was e02fe28).
 
-task 2
+task 2________________________________________
 
 
 User@Gateway MINGW64 /d/HWVCS (master)
@@ -319,7 +276,7 @@ $
 
 
 
-TASK_3
+TASK_3______________________________________________
 
 
 
@@ -383,7 +340,7 @@ remote: Resolving deltas: 100% (2/2), completed with 1 local object.
 To https://github.com/yurik359/HWVCS.git
  * [new tag]         v1.0 -> v1.0
 
-task 4
+task 4__________________________________________________________
 
 User@Gateway MINGW64 /d/HWVCS (master)
 $ git submodule add https://github.com/yurik359/HWVCS.git HWVCS
@@ -416,7 +373,7 @@ To https://github.com/yurik359/HWVCS.git
    db3db12..9dd458d  master -> master
 
 
-task 5
+task 5___________________________________________________
 
 User@Gateway MINGW64 /d/HWVCS (master)
 $ git checkout -b gh-pages
@@ -470,7 +427,7 @@ To https://github.com/yurik359/HWVCS.git
 https://yurik359.github.io/HWVCS/
 
 
-task 6
+task 6______________________________________-
 
 User@Gateway MINGW64 /d/HWVCS (master)
 $ touch file.txt
